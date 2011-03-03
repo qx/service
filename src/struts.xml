@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+<constant name="struts.i18n.encoding" value="UTF-8"/>
+<constant name="struts.action.extension" value="action,do,," />
+<constant name="struts.objectFactory" value="spring" />
+				<!-- http://127.0.0.1:8080/json -->
+<package name="json_xample" extends="json-default">
+	<action name="json" class="testJson">
+		<result type="json"></result>
+	</action>
+				<!--  http://127.0.0.1:8080/json2
+				{"newName":"custom","field1":null,"ints":[10,20],"map":{"name":"yeeku"}}
+				 -->
+	<action name="json2" class="testJson2">
+		<result type="json"></result>
+	</action>
+</package>
+				<!-- http://127.0.0.1:8080/jsp_indexMethod
+				<package name="example"  extends="struts-default">
+					 <action name="jsp_*"  class="index"  method="{1}">
+							<result name="jsp">a.jsp</result>
+					</action>
+				</package>
+				-->
+<package name="show" extends="json-default">
+		<action name="index" class="index">
+			<result type="json"></result>
+		</action>
+</package>
+</struts>
