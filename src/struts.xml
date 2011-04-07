@@ -24,9 +24,690 @@
 		</action>
 		</package>
 	-->
-	<package name="test" extends="json-default">
-		<action name="p1_get" class="p1">
+	<package name="Page1Activity" extends="json-default">
+		<!-- add -->
+		<action name="p1_add" class="p1">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p1_delete" class="p1">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p1_update" class="p1">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p1_search" class="p1">
 			<result type="json"></result>
 		</action>
 	</package>
+	<package name="Page2Activity" extends="json-default">
+		<!-- add -->
+		<action name="p2_add" class="p2">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p2_delete" class="p2">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p2_update" class="p2">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p2_search" class="p2">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page3Activity" extends="json-default">
+		<!-- add -->
+		<action name="p3_add" class="p3">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p3_delete" class="p3">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p3_update" class="p3">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p3_search" class="p3">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page4Activity" extends="json-default">
+		<!-- add -->
+		<action name="p4_add" class="p4">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p4_delete" class="p4">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p4_update" class="p4">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p4_search" class="p4">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page5Activity" extends="json-default">
+		<!-- add -->
+		<action name="p5_add" class="p5">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p5_delete" class="p5">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p5_update" class="p5">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p5_search" class="p5">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page6Activity" extends="json-default">
+		<!-- add -->
+		<action name="p6_add" class="p6">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p6_delete" class="p6">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p6_update" class="p6">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p6_search" class="p6">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page7Activity" extends="json-default">
+		<!-- add -->
+		<action name="p7_add" class="p7">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p7_delete" class="p7">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p7_update" class="p7">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p7_search" class="p7">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page8Activity" extends="json-default">
+		<!-- add -->
+		<action name="p8_add" class="p8">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p8_delete" class="p8">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p8_update" class="p8">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p8_search" class="p8">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page9Activity" extends="json-default">
+		<!-- add -->
+		<action name="p9_add" class="p9">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p9_delete" class="p9">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p9_update" class="p9">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p9_search" class="p9">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page10Activity" extends="json-default">
+		<!-- add -->
+		<action name="p10_add" class="p10">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p10_delete" class="p10">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p10_update" class="p10">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p10_search" class="p10">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page11Activity" extends="json-default">
+		<!-- add -->
+		<action name="p11_add" class="p11">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p11_delete" class="p11">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p11_update" class="p11">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p11_search" class="p11">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page12Activity" extends="json-default">
+		<!-- add -->
+		<action name="p12_add" class="p12">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p12_delete" class="p12">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p12_update" class="p12">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p12_search" class="p12">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page13Activity" extends="json-default">
+		<!-- add -->
+		<action name="p13_add" class="p13">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p13_delete" class="p13">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p13_update" class="p13">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p13_search" class="p13">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page14Activity" extends="json-default">
+		<!-- add -->
+		<action name="p14_add" class="p14">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p14_delete" class="p14">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p14_update" class="p14">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p14_search" class="p14">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page15Activity" extends="json-default">
+		<!-- add -->
+		<action name="p15_add" class="p15">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p15_delete" class="p15">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p15_update" class="p15">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p15_search" class="p15">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page16Activity" extends="json-default">
+		<!-- add -->
+		<action name="p16_add" class="p16">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p16_delete" class="p16">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p16_update" class="p16">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p16_search" class="p16">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page17Activity" extends="json-default">
+		<!-- add -->
+		<action name="p17_add" class="p17">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p17_delete" class="p17">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p17_update" class="p17">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p17_search" class="p17">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page18Activity" extends="json-default">
+		<!-- add -->
+		<action name="p18_add" class="p18">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p18_delete" class="p18">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p18_update" class="p18">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p18_search" class="p18">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page19Activity" extends="json-default">
+		<!-- add -->
+		<action name="p19_add" class="p19">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p19_delete" class="p19">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p19_update" class="p19">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p19_search" class="p19">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page20Activity" extends="json-default">
+		<!-- add -->
+		<action name="p20_add" class="p20">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p20_delete" class="p20">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p20_update" class="p20">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p20_search" class="p20">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page221Activity" extends="json-default">
+		<!-- add -->
+		<action name="p21_add" class="p21">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p21_delete" class="p21">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p21_update" class="p21">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p21_search" class="p21">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page22Activity" extends="json-default">
+		<!-- add -->
+		<action name="p22_add" class="p22">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p22_delete" class="p22">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p22_update" class="p22">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p22_search" class="p22">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page23Activity" extends="json-default">
+		<!-- add -->
+		<action name="p23_add" class="p23">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p23_delete" class="p23">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p23_update" class="p23">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p23_search" class="p23">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page24Activity" extends="json-default">
+		<!-- add -->
+		<action name="p24_add" class="p24">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p24_delete" class="p24">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p24_update" class="p24">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p24_search" class="p24">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page25Activity" extends="json-default">
+		<!-- add -->
+		<action name="p25_add" class="p25">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p25_delete" class="p25">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p25_update" class="p25">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p25_search" class="p25">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page26Activity" extends="json-default">
+		<!-- add -->
+		<action name="p26_add" class="p26">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p26_delete" class="p26">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p26_update" class="p26">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p26_search" class="p26">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page27Activity" extends="json-default">
+		<!-- add -->
+		<action name="p27_add" class="p27">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p27_delete" class="p27">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p27_update" class="p27">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p27_search" class="p27">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page28Activity" extends="json-default">
+		<!-- add -->
+		<action name="p28_add" class="p28">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p28_delete" class="p28">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p28_update" class="p28">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p28_search" class="p28">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page29Activity" extends="json-default">
+		<!-- add -->
+		<action name="p29_add" class="p29">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p29_delete" class="p29">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p29_update" class="p29">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p29_search" class="p29">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page30Activity" extends="json-default">
+		<!-- add -->
+		<action name="p30_add" class="p30">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p30_delete" class="p30">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p30_update" class="p30">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p30_search" class="p30">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page31Activity" extends="json-default">
+		<!-- add -->
+		<action name="p31_add" class="p31">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p31_delete" class="p31">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p31_update" class="p31">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p31_search" class="p31">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page32Activity" extends="json-default">
+		<!-- add -->
+		<action name="p32_add" class="p32">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p32_delete" class="p32">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p32_update" class="p32">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p32_search" class="p32">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page33Activity" extends="json-default">
+		<!-- add -->
+		<action name="p33_add" class="p33">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p33_delete" class="p33">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p33_update" class="p33">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p33_search" class="p33">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page34Activity" extends="json-default">
+		<!-- add -->
+		<action name="p34_add" class="p34">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p34_delete" class="p34">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p34_update" class="p34">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p34_search" class="p34">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page35Activity" extends="json-default">
+		<!-- add -->
+		<action name="p35_add" class="p35">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p35_delete" class="p35">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p35_update" class="p35">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p35_search" class="p35">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page36Activity" extends="json-default">
+		<!-- add -->
+		<action name="p36_add" class="p36">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p36_delete" class="p36">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p36_update" class="p36">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p36_search" class="p36">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page37Activity" extends="json-default">
+		<!-- add -->
+		<action name="p37_add" class="p37">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p37_delete" class="p37">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p37_update" class="p37">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p37_search" class="p37">
+			<result type="json"></result>
+		</action>
+	</package>
+	<package name="Page38Activity" extends="json-default">
+		<!-- add -->
+		<action name="p38_add" class="p38">
+			<result type="json"></result>
+		</action>
+		<!-- delete -->
+		<action name="p38_delete" class="p38">
+			<result type="json"></result>
+		</action>
+		<!-- update -->
+		<action name="p38_update" class="p38">
+			<result type="json"></result>
+		</action>
+		<!-- search -->
+		<action name="p38_search" class="p38">
+			<result type="json"></result>
+		</action>
+	</package>
+
+
 </struts>
