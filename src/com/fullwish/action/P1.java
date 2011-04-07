@@ -5,7 +5,10 @@ package com.fullwish.action;
 
 import javax.annotation.Resource;
 
+import net.sf.json.JSONObject;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.web.HttpRequestHandler;
 
 import com.fullwish.bean.entity.User;
 import com.fullwish.service.user.UserService;
@@ -21,8 +24,11 @@ public class P1  extends ActionSupport  {
     
     @Resource(name = "userServiceImpl")
     UserService userService;
-    private String User_google;
+    private String user_google;
     private User user;
+    private String user_json;//获取客户端发送的json数据
+   
+    
 
     public User getUser() {
         return user;
@@ -37,20 +43,33 @@ public class P1  extends ActionSupport  {
     //    user=new User("kajsd@gmail.com","woailuo",1); //test pass
         ActionContext ctx = ActionContext.getContext();
      //   userService.save(user);//存入数据库
-       user= userService.find(User_google);
+       String test=user_json.toString();
+        System.out.println(test);
+       user= userService.find(user_google);
       // user.getUser_google()
         ctx.getSession().put("user", user);//session保存user对象信息
         System.out.println("search ok");
         return SUCCESS;
      /*   {"newName":"custom","field1":null,"field2":null,"field3":null,"ints":[10,20],"map":{"name":"yeeku"}}*/
     }
+//    public String add() {
+//        ActionContext ctx = ActionContext.getContext();
+//        userService.save();
+//        return "add";
+//    }
+//
+//    public String getUser_google() {
+//        return user_google;
+//    }//返回值
 
-    public String getUser_google() {
-        return User_google;
+    public void setUser_google(String user_google) {
+        this.user_google = user_google;//参数
     }
 
-    public void setUser_google(String User_google) {
-        this.User_google = User_google;
+    public void setUser_json(String user_json) {
+        this.user_json = user_json;
     }
+
+
 
 }
