@@ -13,6 +13,12 @@ import javax.persistence.Id;
  */
 @Entity
 public class User {
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return this.user_email;
+    }
+
     /* 用户邮箱,唯一标示,(取回密码) */
     private String user_email;
 

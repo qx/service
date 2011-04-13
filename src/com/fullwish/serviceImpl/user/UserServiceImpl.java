@@ -23,7 +23,7 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
     // }
     @Override
     public void save(User entity) {
-         entity.setUser_password(MD5.MD5Encode(entity.getUser_password()));
+        entity.setUser_password(MD5.MD5Encode(entity.getUser_password()));
         super.save(entity);
     }
 
@@ -35,13 +35,15 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
         return count > 0;
     }
 
-    // public boolean checkUser(String user_google, String password){
-    // long count =
-    // (Long)em.createQuery("select count(o) from user o where o.user_google=?1 and o.password=?2")
-    // .setParameter(1, user_google).setParameter(2,
-    // MD5.MD5Encode(password)).getSingleResult();
-    // return count>0;
-    // }
+    public boolean checkUser(String user_email, String user_password) {
+        long count = (Long) em
+                .createQuery(
+                        "select count(o) from user o where o.user_email=?1 and o.user_password=?2")
+                .setParameter(1, user_email).setParameter(2,
+                        MD5.MD5Encode(user_password)).getSingleResult();
+        System.out.println("check over");
+        return count > 0;
+    }
 
     @Override
     public void delete(Serializable... entityIds) {

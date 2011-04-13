@@ -66,7 +66,7 @@ public class P1 extends ActionSupport {
     public String add() {
         ActionContext ctx = ActionContext.getContext();
         ctx.getSession().put("user", "add");
-        System.out.println("add");
+        System.out.println("p1_add"+user_json);
         return SUCCESS;
     }
 

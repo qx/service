@@ -24,6 +24,12 @@
 		</action>
 		</package>
 	-->
+	<package name="Login" extends="json-default">
+		<!-- add,delete,search.update -->
+		<action name="login_*" class="login" method="{1}">
+			<result type="json"></result>
+		</action>
+	</package>
 	<package name="Page1Activity" extends="json-default">
 		<!-- add -->
 		<action name="p1_*" class="p1" method="{1}">

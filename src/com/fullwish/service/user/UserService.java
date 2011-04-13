@@ -17,13 +17,13 @@ public interface UserService extends DAO<User>{
      * @return
      */
     public boolean exsit(String user_google);
-//    /**
-//     * 判断用户名及密码是否正确
-//     * @param user_google
-//     * @param password
-//     * @return
-//     */
-//    public boolean checkUser(String user_google, String password);
+    /**
+     * 判断用户名及密码是否正确
+     * @param user_email
+     * @param user_password
+     * @return
+     */
+    public boolean checkUser(String user_email, String user_password);
 //    /**
 //     * 更新密码
 //     * @param user_google 用户名
