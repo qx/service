@@ -13,8 +13,11 @@ import javax.persistence.Id;
  */
 @Entity
 public class User {
-    /* 绑定的google账号 */
-    private String user_google;
+    /* 用户邮箱,唯一标示,(取回密码) */
+    private String user_email;
+
+    /** 密码 * */
+    private String user_password;// 采用MD5加密
 
     /* 用户昵称 */
     private String user_nickname;
@@ -82,32 +85,51 @@ public class User {
     /* 解救次数 */
     private int user_rescue;
 
-    @Id
-    public String getUser_google() {
-        return user_google;
-    }
-
     public User() {
 
     }
 
     /**
-     * @param userGoogle
-     * @param userNickname
-     * @param userLevel
+     * @param user_email
+     *            用户账号唯一标示,也可用作取回密码
+     * @param user_password
+     *            用户密码,登录游戏 创建测试数据,初始值设置如下 行动力3 user_action 攻击力0 防御力0 经验值0 朋友数量0
+     *            能量:10 user_energy 血量值:100 user_healthpoint 隐藏攻击力:0 隐藏防御力:0
+     *            等级:1 user_level 金钱:0 奖励点数:0 技能点数:0 职业:未定 所属势力: 微博账号:未定// 测试
+     *            user_microblog="qx.ouyang@gmail.com" 战斗胜利场数:0 战斗失败场数:0 绑架次数:0
+     *            被绑次数:0
      */
-    public User(String userGoogle, String userNickname, int userLevel) {
+    public User(String user_email, String user_password) {
         super();
-        user_google = userGoogle;
-        user_nickname = userNickname;
-        user_level = userLevel;
+        this.user_email = user_email;
+        this.user_password = user_password;
+        this.user_action = 3;
+        this.user_energy = 10;
+        this.user_healthpoint = 100;
+        this.user_level = 1;
+
     }
 
-    public void setUser_google(String userGoogle) {
-        user_google = userGoogle;
+    @Id
+    @Column(length = 32)
+    public String getUser_email() {
+        return user_email;
     }
 
-    @Column(length = 18, nullable = false)
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
+    }
+
+    @Column(length = 32, nullable = false)
+    public String getUser_password() {
+        return user_password;
+    }
+
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
+    }
+
+    @Column(length = 18)
     public String getUser_nickname() {
         return user_nickname;
     }
@@ -197,7 +219,7 @@ public class User {
         user_hideDefense = userHideDefense;
     }
 
-    @Column(nullable = false)
+    @Column
     public int getUser_level() {
         return user_level;
     }
@@ -310,7 +332,7 @@ public class User {
         final int prime = 31;
         int result = 1;
         result = prime * result
-                + ((user_google == null) ? 0 : user_google.hashCode());
+                + ((user_email == null) ? 0 : user_email.hashCode());
         return result;
     }
 
@@ -323,10 +345,10 @@ public class User {
         if (getClass() != obj.getClass())
             return false;
         final User other = (User) obj;
-        if (user_google == null) {
-            if (other.user_google != null)
+        if (user_email == null) {
+            if (other.user_email != null)
                 return false;
-        } else if (!user_google.equals(other.user_google))
+        } else if (!user_email.equals(other.user_email))
             return false;
         return true;
     }

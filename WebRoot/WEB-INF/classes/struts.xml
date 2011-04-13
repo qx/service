@@ -26,19 +26,21 @@
 	-->
 	<package name="Page1Activity" extends="json-default">
 		<!-- add -->
-		<action name="p1_add" class="p1">
+		<action name="p1_*" class="p1" method="{1}">
 			<result type="json"></result>
 		</action>
 		<!-- delete -->
-		<action name="p1_delete" class="p1">
+		<action name="p1_*" class="p1" method="{1}">
 			<result type="json"></result>
 		</action>
-		<!-- update -->
-		<action name="p1_update" class="p1">
+		<!-- update --><!--
+		http://127.0.0.1:8080/p1_update
+		-->
+		<action name="p1_*" class="p1" method="{1}">
 			<result type="json"></result>
 		</action>
 		<!-- search -->
-		<action name="p1_search" class="p1">
+		<action name="p1_*" class="p1" method="{1}">
 			<result type="json"></result>
 		</action>
 	</package>

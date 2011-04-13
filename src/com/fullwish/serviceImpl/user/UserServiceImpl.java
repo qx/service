@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.fullwish.bean.entity.User;
 import com.fullwish.service.base.DaoSupport;
 import com.fullwish.service.user.UserService;
+import com.fullwish.utils.MD5;
 
 @Service
 @Transactional
@@ -22,7 +23,7 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
     // }
     @Override
     public void save(User entity) {
-        // entity.setPassword(MD5.MD5Encode(entity.getPassword()));
+         entity.setUser_password(MD5.MD5Encode(entity.getUser_password()));
         super.save(entity);
     }
 
