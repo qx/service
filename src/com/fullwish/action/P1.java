@@ -5,10 +5,7 @@ package com.fullwish.action;
 
 import javax.annotation.Resource;
 
-import net.sf.json.JSONObject;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.web.HttpRequestHandler;
 
 import com.fullwish.bean.entity.User;
 import com.fullwish.service.user.UserService;
@@ -21,6 +18,10 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 @Controller
 public class P1 extends ActionSupport {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 903336814832481014L;
 
     @Resource(name = "userServiceImpl")
     UserService userService;
@@ -66,7 +67,7 @@ public class P1 extends ActionSupport {
     public String add() {
         ActionContext ctx = ActionContext.getContext();
         ctx.getSession().put("user", "add");
-        System.out.println("p1_add"+user_json);
+        System.out.println("p1_add" + user_json);
         return SUCCESS;
     }
 

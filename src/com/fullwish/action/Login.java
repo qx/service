@@ -27,6 +27,11 @@ import com.opensymphony.xwork2.ActionSupport;
 @Controller
 public class Login extends ActionSupport {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+
     @Resource(name = "userServiceImpl")
     UserService userService;
 
@@ -37,12 +42,13 @@ public class Login extends ActionSupport {
 
     private String user_string;// 获取客户端发送的json数据
 
-    private JSONObject user_json;// 由user_string转过来
+    // private JSONObject user_json;// 由user_string转过来
 
     public void setUser_string(String user_string) {
         this.user_string = user_string;
     }
 
+    @SuppressWarnings("unchecked")
     public String login() {// login
         HashMap<String, String> user_map = new HashMap<String, String>();
         // ctx.getSession().put("user",user);放入session信息
@@ -82,7 +88,6 @@ public class Login extends ActionSupport {
     // System.out.println(user_string);
     // return SUCCESS;
     /* {"newName":"custom","field1":null,"field2":null,"field3":null,"ints":[10,20],"map":{"name":"yeeku"}} */
-
     public String update() {
         ActionContext ctx = ActionContext.getContext();
         ctx.getSession().put("user", "update");
@@ -93,7 +98,6 @@ public class Login extends ActionSupport {
     public String add() {// register
         ActionContext ctx = ActionContext.getContext();
         // 获取user_json值
-        //
         user = new User();
         try {
             JSONObject user_json = new JSONObject(user_string);
