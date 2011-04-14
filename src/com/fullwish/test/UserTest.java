@@ -27,4 +27,8 @@ public class UserTest {
     public void save() {
       //  userService.save(new User("niublaoda"));
     }
+    @Test
+    public void check() {
+        userService.checkUser("abc@test.com", "ok");
+    }
 }

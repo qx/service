@@ -36,14 +36,24 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
     }
 
     public boolean checkUser(String user_email, String user_password) {
+        // System.out.println("CHECKUSER MD5
+        // PASSWORD"+MD5.MD5Encode(user_password));
         long count = (Long) em
                 .createQuery(
-                        "select count(o) from user o where o.user_email=?1 and o.user_password=?2")
-                .setParameter(1, user_email).setParameter(2,
-                        MD5.MD5Encode(user_password)).getSingleResult();
-        System.out.println("check over");
+                        "select count(o) from User o where o.user_email=?1 and o.user_password=?2")
+                // user±íÒª´óÐ´
+                .setParameter(1, user_email).setParameter(2, MD5.MD5Encode(user_password))
+                .getSingleResult();
+        // System.out.println("check over");
         return count > 0;
     }
+
+    /*
+     * public boolean checkUser(String username, String password){ long count =
+     * (Long)em.createQuery("select count(o) from Buyer o where o.username=?1
+     * and o.password=?2") .setParameter(1, username).setParameter(2,
+     * MD5.MD5Encode(password)).getSingleResult(); return count>0; }
+     */
 
     @Override
     public void delete(Serializable... entityIds) {
