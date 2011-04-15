@@ -35,20 +35,6 @@
 		<action name="p1_*" class="p1" method="{1}">
 			<result type="json"></result>
 		</action>
-		<!-- delete -->
-		<action name="p1_*" class="p1" method="{1}">
-			<result type="json"></result>
-		</action>
-		<!-- update --><!--
-		http://127.0.0.1:8080/p1_update
-		-->
-		<action name="p1_*" class="p1" method="{1}">
-			<result type="json"></result>
-		</action>
-		<!-- search -->
-		<action name="p1_*" class="p1" method="{1}">
-			<result type="json"></result>
-		</action>
 	</package>
 	<package name="Page2Activity" extends="json-default">
 		<!-- add -->
