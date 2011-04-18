@@ -22,6 +22,7 @@ public class Index extends ActionSupport {
 
     private static final long serialVersionUID = 341L;
 
+    @SuppressWarnings("unused")
     private User user;
 
     // json据get方法获得属性值

@@ -13,6 +13,11 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 @Controller
 public class TestJson extends ActionSupport {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1901442172744219606L;
+
     public String execute(){
      
         System.out.println("in the acion method(TestJson)");

@@ -103,6 +103,10 @@ public class Login extends ActionSupport {
             JSONObject user_json = new JSONObject(user_string);
             user.setUser_email(user_json.getString("user_email"));
             user.setUser_password(user_json.getString("user_password"));
+            user.setUser_action(3);
+            user.setUser_energy(10);
+            user.setUser_healthpoint(100);
+            user.setUser_level(1);
             userService.save(user);
         } catch (JSONException e) {
             e.printStackTrace();

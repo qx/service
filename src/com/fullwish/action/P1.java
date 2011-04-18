@@ -5,6 +5,8 @@ package com.fullwish.action;
 
 import javax.annotation.Resource;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 
 import com.fullwish.bean.entity.User;
@@ -50,10 +52,10 @@ public class P1 extends ActionSupport {
 
     public String search() {
         ActionContext ctx = ActionContext.getContext();
-      //  System.out.println(user_email);
+        // System.out.println(user_email);
         user = userService.find(user_email);
         System.out.println("p1_search+" + user);
-
+        // user_string = user.toString();
         return SUCCESS;
     }
 
@@ -70,9 +72,25 @@ public class P1 extends ActionSupport {
      */
 
     public String update() {
+        String user_email = null;
+        String user_country = null;
+        String user_career = null;
+        String user_nickname = null;
+
         ActionContext ctx = ActionContext.getContext();
         ctx.getSession().put("user", "update");
         System.out.println("p1_update  " + user_string);
+        try {
+            JSONObject user_json = new JSONObject(user_string);
+            user_country = user_json.getString("user_country");
+            user_career = user_json.getString("user_career");
+            user_nickname = user_json.getString("user_nickname");
+            user_email = user_json.getString("user_email");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        userService.updateUserInfo(user_email, user_country, user_career,
+                user_nickname);
         return SUCCESS;
     }
 

@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.fullwish.service.user.UserService;
 
-public class UserTest {
+public class TestUpdateInfo {
     private static UserService userService;
 
     @BeforeClass
@@ -17,17 +17,22 @@ public class UserTest {
                     "beans.xml");
             userService = (UserService) act.getBean("userServiceImpl");
         } catch (RuntimeException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
-    @Test
-    public void save() {
-        // userService.save(new User("niublaoda"));
-    }
+    // @Test
+    // public void save() {
+    // // userService.save(new User("niublaoda"));
+    // }
 
+    // @Test
+    // public void check() {
+    // userService.checkUser("abc@test.com", "ok");
+    // }
     @Test
-    public void check() {
-        userService.checkUser("abc@test.com", "ok");
+    public void updateInfo() {
+        userService.updateUserInfo("test@gmail.com", "Îº¹ú", "Ãô½Ý", "ÎÒ");
     }
 }

@@ -3,9 +3,14 @@
  */
 package com.fullwish.bean.entity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import com.fullwish.utils.JsonUtil;
 
 /**
  * @author fullwish
@@ -13,10 +18,63 @@ import javax.persistence.Id;
  */
 @Entity
 public class User {
+
+    @SuppressWarnings("unchecked")
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return this.user_email;
+        HashMap<String, String> user_map;
+        user_map = new HashMap<String, String>();
+        // * @param user_email
+        user_map.put("user_email", this.user_email);
+        // * @param user_password
+        user_map.put("user_password", this.user_password);
+        // * @param user_nickname
+        user_map.put("user_nickname", this.user_nickname);
+        // * @param user_action
+        user_map.put("user_action", this.user_action + "");
+        // * @param user_attack
+        user_map.put("user_attack", this.user_attack + "");
+        // * @param user_defense
+        user_map.put("user_defense", this.user_defense + "");
+        // * @param user_experience
+        user_map.put("user_experience", this.user_experience + "");
+        // * @param user_friend
+        user_map.put("user_friend", this.user_friend + "");
+        // * @param user_energy
+        user_map.put("user_energy", this.user_energy + "");
+        // * @param user_healthpoint
+        user_map.put("user_healthpoint", this.user_healthpoint + "");
+        // * @param user_hideAttack
+        user_map.put("user_hideAttack", this.user_hideAttack + "");
+        // * @param user_hideDefense
+        user_map.put("user_hideDefense", this.user_hideDefense + "");
+        // * @param user_level
+        user_map.put("user_level", this.user_level + "");
+        // * @param user_money
+        user_map.put("user_money", this.user_money + "");
+        // * @param user_reward_Point
+        user_map.put("user_reward_Point", this.user_reward_Point + "");
+        // * @param user_skill_Point
+        user_map.put("user_skill_Point", this.user_skill_Point + "");
+        // * @param user_career
+        user_map.put("user_career", this.user_career + "");
+        // * @param user_country
+        user_map.put("user_country", this.user_country + "");
+        // * @param user_microblog
+        user_map.put("user_microblog", this.user_microblog + "");
+        // * @param user_fight_win
+        user_map.put("user_fight_win", this.user_fight_win + "");
+        // * @param user_fight_lose
+        user_map.put("user_fight_lose", this.user_fight_lose + "");
+        // * @param user_kidnap
+        user_map.put("user_kidnap", this.user_kidnap + "");
+        // * @param user_bekidnap
+        user_map.put("user_bekidnap", this.user_bekidnap + "");
+        // * @param user_rescue
+        user_map.put("user_rescue", this.user_rescue + "");
+        // */
+        String user_string = JsonUtil.map2Json((Map) user_map);
+        return user_string;
     }
 
     /* 用户邮箱,唯一标示,(取回密码) */
@@ -68,7 +126,7 @@ public class User {
     private int user_skill_Point;
 
     /* 职业 */
-    private String user_carrer;
+    private String user_career;
 
     /* 所属地区 */
     private String user_country;
@@ -261,16 +319,16 @@ public class User {
         user_skill_Point = userSkillPoint;
     }
 
-    @Column(length = 10)
-    public String getUser_carrer() {
-        return user_carrer;
+    @Column(length = 18)
+    public String getUser_career() {
+        return user_career;
     }
 
-    public void setUser_carrer(String userCarrer) {
-        user_carrer = userCarrer;
+    public void setUser_career(String userCareer) {
+        user_career = userCareer;
     }
 
-    @Column(length = 12)
+    @Column(length = 18)
     public String getUser_country() {
         return user_country;
     }

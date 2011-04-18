@@ -17,6 +17,11 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 @Controller
 public class TestJson2 extends ActionSupport {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -6904551088211709647L;
+
     // 封装请求参数的三个属性 　　
     private String field1; //null
 
@@ -81,6 +86,7 @@ public class TestJson2 extends ActionSupport {
         return this.customName;
     }
 
+    @SuppressWarnings("unchecked")
     public String execute() {
         map.put("name", "yeeku");
         // return Action.SUCCESS;

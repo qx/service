@@ -21,6 +21,7 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
     // .setParameter(1, MD5.MD5Encode(newpassword)).setParameter(2,
     // user_google).executeUpdate();
     // }
+
     @Override
     public void save(User entity) {
         entity.setUser_password(MD5.MD5Encode(entity.getUser_password()));
@@ -42,8 +43,8 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
                 .createQuery(
                         "select count(o) from User o where o.user_email=?1 and o.user_password=?2")
                 // user±íÒª´óÐ´
-                .setParameter(1, user_email).setParameter(2, MD5.MD5Encode(user_password))
-                .getSingleResult();
+                .setParameter(1, user_email).setParameter(2,
+                        MD5.MD5Encode(user_password)).getSingleResult();
         // System.out.println("check over");
         return count > 0;
     }
@@ -87,5 +88,23 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
 
     public void enable(Serializable... user_googles) {
         visible(true, user_googles);
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.fullwish.service.user.UserService#updateUserInfo(java.lang.String,
+     *      java.lang.String, java.lang.String, java.lang.String)
+     */
+    public void updateUserInfo(String user_email, String user_country,
+            String user_career, String user_nickname) {
+        // update user o set o.user_action=2,o.user_attack=3
+        // where o.user_email="test@gmail.com";
+        em
+                .createQuery(
+                        "update User o set o.user_country=?1, o.user_career=?2, o.user_nickname=?3 where o.user_email=?4")
+                .setParameter(1, user_country).setParameter(2, user_career)
+                .setParameter(3, user_nickname).setParameter(4, user_email)
+                .executeUpdate();
     }
 }
