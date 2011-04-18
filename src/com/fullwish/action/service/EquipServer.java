@@ -16,6 +16,8 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 @Controller
 public class EquipServer extends ActionSupport {
+ //  private String tools_path;
+
     private String tools_attack;
 
     private String tools_defense;
@@ -45,9 +47,18 @@ public class EquipServer extends ActionSupport {
         System.out.println("EquipServer add method over");
         return "addpage";
     }
+
     // ∑√Œ ¬∑æ∂ 192.168.2.3:8080/server_controller/equip_addfinish
     public String addfinish() {
         System.out.println("EquipServer addfinish method start");
+
+      //  System.out.println(tools_path);
+        System.out.println(tools_attack);
+        System.out.println(tools_defense);
+        System.out.println(tools_pic);
+        System.out.println(tools_spe);
+        System.out.println(tools_keep);
+        System.out.println(tools_level);
         System.out.println("EquipServer addfinish method over");
         return "addfinish";
     }
@@ -75,4 +86,8 @@ public class EquipServer extends ActionSupport {
     public void setTools_spe(String tools_spe) {
         this.tools_spe = tools_spe;
     }
+
+//    public void setTools_path(String tools_path) {
+//        this.tools_path = tools_path;
+//    }
 }

@@ -40,7 +40,17 @@ public class SkillsServer extends ActionSupport {
     // ∑√Œ ¬∑æ∂ 192.168.2.3:8080/server_controller/skills_addfinish
     public String addfinish() {
         System.out.println("SkillsServer addfinish method start");
+        System.out.println(mission_level);
+        System.out.println(mission_exp);
         System.out.println("SkillsServer addfinish method over");
         return "addfinish";
+    }
+
+    public void setMission_exp(String mission_exp) {
+        this.mission_exp = mission_exp;
+    }
+
+    public void setMission_level(String mission_level) {
+        this.mission_level = mission_level;
     }
 }
