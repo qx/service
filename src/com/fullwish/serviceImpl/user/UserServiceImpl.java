@@ -16,10 +16,10 @@ import com.fullwish.utils.MD5;
 @Service
 @Transactional
 public class UserServiceImpl extends DaoSupport<User> implements UserService {
-    // public void updatePassword(String user_google, String newpassword){
-    // em.createQuery("update user o set o.password=?1 where o.user_google=?2")
+    // public void updatePassword(String user_email, String newpassword){
+    // em.createQuery("update user o set o.password=?1 where o.user_email=?2")
     // .setParameter(1, MD5.MD5Encode(newpassword)).setParameter(2,
-    // user_google).executeUpdate();
+    // user_email).executeUpdate();
     // }
 
     @Override
@@ -29,10 +29,10 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
     }
 
     @Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
-    public boolean exsit(String user_google) {
+    public boolean exsit(String user_email) {
         long count = (Long) em.createQuery(
-                "select count(o) from user o where o.user_google=?1")
-                .setParameter(1, user_google).getSingleResult();
+                "select count(o) from User o where o.user_email=?1")
+                .setParameter(1, user_email).getSingleResult();
         return count > 0;
     }
 
@@ -64,30 +64,28 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
     @Override
     public long getCount() {
         return (Long) em.createQuery(
-                "select count(o) from user o where o.visible=?1").setParameter(
+                "select count(o) from User o where o.user_visible=?1").setParameter(
                 1, true).getSingleResult();
     }
 
-    private void visible(boolean visible, Serializable... user_googles) {
-        if (user_googles != null && user_googles.length > 0) {
+    private void visible(boolean visible, Serializable ... user_emails){
+        if(user_emails!=null && user_emails.length>0){
             StringBuffer jpql = new StringBuffer();
-            for (int i = 0; i < user_googles.length; i++) {
-                jpql.append('?').append(i + 2).append(',');
+            for(int i=0; i<user_emails.length;i++){
+                jpql.append('?').append(i+2).append(',');
             }
-            jpql.deleteCharAt(jpql.length() - 1);
-            Query query = em
-                    .createQuery("update user b set b.visible=?1 where b.user_google in("
-                            + jpql.toString() + ")");
+            jpql.deleteCharAt(jpql.length()-1);
+            Query query = em.createQuery("update User b set b.user_visible=?1 where b.user_email in("+ jpql.toString() +")");
             query.setParameter(1, visible);
-            for (int i = 0; i < user_googles.length; i++) {
-                query.setParameter(i + 2, user_googles[i]);
+            for(int i=0; i<user_emails.length;i++){
+                query.setParameter(i+2, user_emails[i]);
             }
             query.executeUpdate();
         }
     }
 
-    public void enable(Serializable... user_googles) {
-        visible(true, user_googles);
+    public void enable(Serializable... user_emails) {
+        visible(true, user_emails);
     }
 
     /*
@@ -107,4 +105,5 @@ public class UserServiceImpl extends DaoSupport<User> implements UserService {
                 .setParameter(3, user_nickname).setParameter(4, user_email)
                 .executeUpdate();
     }
+
 }

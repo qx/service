@@ -27,6 +27,6 @@ public class InitTable {
         /*user_name user_password*/
         userService.save(new User("qx.ouyang@gmail.com","ok"));
         userService.save(new User("test@gmail.com","ok"));
-        userService.save(new User("abc@gmail.com","ok"));
+        userService.save(new User("test2@gmail.com","ok"));
     }
 }

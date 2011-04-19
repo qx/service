@@ -1,25 +1,27 @@
-package com.fullwish.service.user;
+package com.fullwish.service.tools;
 
 import java.io.Serializable;
 
-import com.fullwish.bean.entity.User;
+import com.fullwish.bean.entity.Tools;
 import com.fullwish.service.base.DAO;
 
-public interface UserService extends DAO<User> {
-    /**
-     * 启用指定用户
-     * 
-     * @param user_emails
-     */
-    public void enable(Serializable... user_emails);
+public interface ToolsService extends DAO<Tools> {
+ 
 
     /**
-     * 判断用户是否存在
+     * 启用指定装备
      * 
-     * @param user_email
+     * @param tools_id
+     */
+    public void enable(Serializable... tools_id);
+
+    /**
+     * 判断装备是否存在
+     * 
+     * @param tools_id
      * @return
      */
-    public boolean exsit(String user_email);
+    public boolean exsit(String tools_id);
 
     /**
      * 判断用户名及密码是否正确
@@ -28,8 +30,7 @@ public interface UserService extends DAO<User> {
      * @param user_password
      * @return
      */
-    public boolean checkUser(String user_email, String user_password);
-
+    // public boolean checkUser(String user_email, String user_password);
     /**
      * 用户信息(user_country,user_career,user_nickname)
      * 
@@ -42,6 +43,6 @@ public interface UserService extends DAO<User> {
      * @param user_nickname
      *            用户昵称
      */
-    public void updateUserInfo(String user_email, String user_country,
-            String user_career, String user_nickname);
+    // public void updateEquipInfo(String user_email, String user_country,
+    // String user_career, String user_nickname);
 }

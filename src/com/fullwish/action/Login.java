@@ -107,6 +107,7 @@ public class Login extends ActionSupport {
             user.setUser_energy(10);
             user.setUser_healthpoint(100);
             user.setUser_level(1);
+            user.setUser_visible(true);
             userService.save(user);
         } catch (JSONException e) {
             e.printStackTrace();

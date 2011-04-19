@@ -64,8 +64,8 @@ public class P1 extends ActionSupport {
      * Action.SUCCESS; // user=new User("kajsd@gmail.com","woailuo",1); //test
      * pass ActionContext ctx = ActionContext.getContext(); //
      * userService.save(user);//存入数据库 String test = user_json.toString();
-     * user_google = "mygoogle@gmail.com"; System.out.println(test); user =
-     * userService.find(user_google); // user.getUser_google()
+     * user_email = "mygoogle@gmail.com"; System.out.println(test); user =
+     * userService.find(user_email); // user.getuser_email()
      * ctx.getSession().put("user", user);// session保存user对象信息
      * System.out.println("search ok"); return SUCCESS;
      * {"newName":"custom","field1":null,"field2":null,"field3":null,"ints":[10,20],"map":{"name":"yeeku"}} }

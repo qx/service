@@ -20,14 +20,14 @@
     <s:form action="/server_controller/equip_addfinish" method="post" enctype ="multipart/form-data"> 
 </form>
 --%>
-    <s:form action="/server_controller/equip_addfinish" method="post" > 
-        <s:textfield name ="tools_attack" label ="tools_attack" />        
-        <s:textfield name ="tools_defense" label ="tools_defense" />        
-        <s:textfield name ="tools_pic" label ="tools_pic" />        
-        <s:textfield name ="tools_spe" label ="tools_spe" />        
-        <s:textfield name ="tools_keep" label ="tools_keep" />        
-        <s:textfield name ="tools_level" label ="tools_level" />        
-        <s:submit /> 
+    <s:form action="/server_controller/equip_addfinish" method="post"  enctype ="multipart/form-data" > 
+    	<s:file name ="image" label ="image(上传图片)" /> 
+        <s:textfield name ="tools_attack" label ="tools_attack(装备攻击力)" />        
+        <s:textfield name ="tools_defense" label ="tools_defense(装备防御力)" />        
+        <s:textfield name ="tools_spe" label ="tools_spe(是否特殊1,0)" />        
+        <s:textfield name ="tools_keep" label ="tools_keep(维护费)" />        
+        <s:textfield name ="tools_level" label ="tools_level(装备等级)" />        
+        <s:submit value="提交" /> 
     </s:form > 
 </body>
 </html>

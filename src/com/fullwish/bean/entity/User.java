@@ -72,7 +72,8 @@ public class User {
         user_map.put("user_bekidnap", this.user_bekidnap + "");
         // * @param user_rescue
         user_map.put("user_rescue", this.user_rescue + "");
-        // */
+        // *@param user_visible
+        user_map.put("user_visible", this.user_visible + "");
         String user_string = JsonUtil.map2Json((Map) user_map);
         return user_string;
     }
@@ -149,6 +150,9 @@ public class User {
     /* 解救次数 */
     private int user_rescue;
 
+    /* 是否启用 */
+    private Boolean user_visible;
+
     public User() {
 
     }
@@ -171,6 +175,7 @@ public class User {
         this.user_energy = 10;
         this.user_healthpoint = 100;
         this.user_level = 1;
+        this.user_visible=true;
 
     }
 
@@ -391,6 +396,15 @@ public class User {
         user_rescue = userRescue;
     }
 
+    @Column(nullable = false)
+    public Boolean getUser_visible() {
+        return user_visible;
+    }
+
+    public void setUser_visible(Boolean user_visible) {
+        this.user_visible = user_visible;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -416,4 +430,5 @@ public class User {
             return false;
         return true;
     }
+
 }

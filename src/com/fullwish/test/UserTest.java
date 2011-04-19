@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.fullwish.bean.entity.User;
 import com.fullwish.service.user.UserService;
 
 public class UserTest {
@@ -24,6 +25,14 @@ public class UserTest {
     @Test
     public void save() {
         // userService.save(new User("niublaoda"));
+    }
+
+    @Test
+    public void find() {
+        // userService.delete("test2@gmail.com");
+        User user = userService.find("test2@gmail.com");
+        System.out.println(user);
+        userService.delete("test2@gmail.com");
     }
 
     @Test
