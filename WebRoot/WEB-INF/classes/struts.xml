@@ -720,10 +720,10 @@
 			<result name="addfinish">/WEB-INF/page/equip_success.jsp</result>
 		</action>
 </package>
-<package name="skills" namespace="/server_controller" extends="struts-default">
-		<action name="skills_*" class="skillsServer" method="{1}">
-			<result name="addpage">/WEB-INF/page/skills.jsp</result>
-			<result name="addfinish">/WEB-INF/page/skills_success.jsp</result>
+<package name="mission" namespace="/server_controller" extends="struts-default">
+		<action name="mission_*" class="missionServer" method="{1}">
+			<result name="addpage">/WEB-INF/page/mission.jsp</result>
+			<result name="addfinish">/WEB-INF/page/mission_success.jsp</result>
 		</action>
 </package>
 

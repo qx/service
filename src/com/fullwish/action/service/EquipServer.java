@@ -96,6 +96,7 @@ public class EquipServer extends ActionSupport {
         tools.setTools_level(toolsLevel);// 设置装备等级
         tools.setTools_pic(toolsPic);// 设置装备(路径)
         tools.setTools_spe(toolsSpe);// 设置装备是否特殊
+        tools.setTools_visible(true);// 设置装备是否启用
         toolsService.save(tools);
         // System.out.println(tools_path);
         System.out.println(tools_attack);
